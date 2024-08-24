@@ -13,3 +13,9 @@ pnpm i @afe1/utils@workspace:* -w
 pnpm i @afe1/constants@workspace:* -w  
 
 app import {xxx} form '@afe1/xxx'
+
+# problem
+
+直接通过git下载仓库
+  - rm -rf .git(所下载的仓库下)
+  - git add xxx(根目录文件名)
