@@ -2,3 +2,4 @@ packages:
   - utils
   - constatns
   - app
+  - preferences

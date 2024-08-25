@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@afe1/preferences':
+        specifier: workspace:^
+        version: link:preferences
       '@afe1/utils':
         specifier: workspace:^
         version: link:utils
@@ -84,6 +87,8 @@ importers:
       vue-tsc:
         specifier: ^2.0.26
         version: 2.0.29(typescript@5.5.4)
+
+  preferences: {}
 
   utils: {}
 
