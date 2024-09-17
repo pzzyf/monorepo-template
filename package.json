@@ -1,16 +1,18 @@
 {
   "name": "monorepo-template",
-  "private": true,
   "type": "module",
   "version": "1.0.0",
+  "private": true,
   "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pnpm -r dev"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm -r dev",
+    "lint": "pnpm --filter @afe1/eslint-config lint",
+    "lint:fix": "pnpm --filter @afe1/eslint-config lint:fix"
+  },
   "dependencies": {
     "@afe1/eslint-config": "workspace:*"
   }
