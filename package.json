@@ -14,6 +14,7 @@
     "lint:fix": "pnpm --filter @afe1/eslint-config lint:fix"
   },
   "dependencies": {
-    "@afe1/eslint-config": "workspace:*"
+    "@afe1/eslint-config": "workspace:*",
+    "@afe1/tsconfig": "workspace:*"
   }
 }
