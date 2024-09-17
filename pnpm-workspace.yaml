@@ -1,5 +1,3 @@
 packages:
-  - utils
-  - constatns
-  - app
-  - preferences
+  - 'packages/*'
+  - 'internal/*'
