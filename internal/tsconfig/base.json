@@ -1,31 +1,40 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Base",
   "compilerOptions": {
-    "target": "esnext",
-    "jsx": "preserve",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "useDefineForClassFields": true,
+    "composite": false,
+    "target": "ESNext",
+
+    "moduleDetection": "force",
+    "experimentalDecorators": true,
+
     "baseUrl": ".",
-    "module": "esnext",
+    "module": "ESNext",
+
     "moduleResolution": "node",
-    "paths": {
-      "src/*": [
-        "src/*"
-      ]
-    },
     "resolveJsonModule": true,
-    "allowJs": true,
+
     "strict": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "inlineSources": false,
     "noEmit": true,
-    "sourceMap": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true
   },
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "exclude": ["**/node_modules/**", "**/dist/**", "**/.turbo/**"]
 }

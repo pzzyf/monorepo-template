@@ -7,13 +7,19 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@afe1/eslint-config':
         specifier: workspace:*
         version: link:internal/eslint-config
       '@afe1/tsconfig':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:internal/tsconfig
+      '@types/node':
+        specifier: ^22.5.5
+        version: 22.5.5
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
 
   internal/eslint-config:
     devDependencies:
@@ -24,14 +30,7 @@ importers:
         specifier: ^9.10.0
         version: 9.10.0
 
-  internal/tsconfig:
-    devDependencies:
-      '@types/node':
-        specifier: ^22.5.5
-        version: 22.5.5
-      typescript:
-        specifier: ^5.6.2
-        version: 5.6.2
+  internal/tsconfig: {}
 
 packages:
 
