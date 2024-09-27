@@ -1,5 +1,5 @@
 // @ts-check
 
-import defineConfig from '@afe1/eslint-config';
+import defineConfig from '@afe1/eslint-config'
 
-export default defineConfig;
+export default defineConfig

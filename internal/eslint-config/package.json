@@ -8,14 +8,19 @@
   "license": "ISC",
   "keywords": [],
   "exports": {
-    ".": "./eslint.config.mjs",
-    "./types": "./index.d.ts"
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./dist/index.mjs"
+    }
   },
-  "main": "eslint.config.mjs",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "stub": "pnpm unbuild --stub"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.6.2",
