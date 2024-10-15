@@ -1,0 +1,25 @@
+{
+  "name": "@afe1/vite-config",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "default": "./dist/index.mjs",
+      "types": "./dist/index.d.ts",
+      "development": "./index.ts"
+    }
+  },
+  "scripts": {
+    "stub": "pnpm unbuild --stub"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
