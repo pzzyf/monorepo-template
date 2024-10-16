@@ -3,6 +3,7 @@ import { defineApplicationConfig } from "./application";
 import { join } from 'node:path'
 
 function defineConfig(
+  useConfigPromise?: any,
   type: 'application' | 'library' | 'auto' = 'auto'
 ) {
 
@@ -15,7 +16,7 @@ function defineConfig(
 
   switch (projectType) {
     case 'application': {
-      return defineApplicationConfig()
+      return defineApplicationConfig(useConfigPromise)
     }
     default: {
       throw new Error(`Unsupported project type: ${projectType}`);
