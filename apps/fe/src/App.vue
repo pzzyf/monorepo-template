@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import a from '@afe1/vite-config'
 </script>
 
 <template>
@@ -13,7 +12,6 @@ import a from '@afe1/vite-config'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <div>{{ a }}</div>
 </template>
 
 <style scoped>
