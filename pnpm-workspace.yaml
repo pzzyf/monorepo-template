@@ -1,8 +1,3 @@
 packages:
   - 'apps/*'
-  - 'packages/*'
   - 'internal/*'
-
-catalog:
-  '@types/node': ^22.5.5
-  typescript: ^5.6.2

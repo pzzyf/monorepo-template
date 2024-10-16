@@ -4,16 +4,12 @@
   "compilerOptions": {
     "composite": false,
     "target": "ESNext",
-
     "moduleDetection": "force",
     "experimentalDecorators": true,
-
     "baseUrl": ".",
     "module": "ESNext",
-
     "moduleResolution": "node",
     "resolveJsonModule": true,
-
     "strict": true,
     "strictNullChecks": true,
     "noFallthroughCasesInSwitch": true,
@@ -23,7 +19,6 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
     "inlineSources": false,
     "noEmit": true,
     "removeComments": true,
@@ -36,5 +31,9 @@
     "skipLibCheck": true,
     "preserveWatchOutput": true
   },
-  "exclude": ["**/node_modules/**", "**/dist/**", "**/.turbo/**"]
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/.turbo/**"
+  ]
 }

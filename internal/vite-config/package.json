@@ -8,11 +8,11 @@
   ],
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./index.ts",
   "exports": {
     ".": {
       "default": "./dist/index.mjs",
-      "types": "./dist/index.d.ts",
+      "types": "./src/index.ts",
       "development": "./index.ts"
     }
   },
@@ -21,5 +21,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "vite": "^5.4.8"
+  }
 }

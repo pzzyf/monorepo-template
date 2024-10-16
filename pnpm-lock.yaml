@@ -4,15 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-catalogs:
-  default:
-    '@types/node':
-      specifier: ^22.5.5
-      version: 22.5.5
-    typescript:
-      specifier: ^5.6.2
-      version: 5.6.2
-
 importers:
 
   .:
@@ -23,14 +14,17 @@ importers:
       '@afe1/tsconfig':
         specifier: workspace:*
         version: link:internal/tsconfig
+      '@afe1/vite-config':
+        specifier: workspace:^
+        version: link:internal/vite-config
       '@types/node':
-        specifier: 'catalog:'
+        specifier: ^22.5.5
         version: 22.5.5
       turbo:
         specifier: ^2.1.2
         version: 2.1.2
       typescript:
-        specifier: 'catalog:'
+        specifier: ^5.6.2
         version: 5.6.2
       unbuild:
         specifier: ^2.0.0
@@ -42,15 +36,9 @@ importers:
         specifier: ^3.5.10
         version: 3.5.12(typescript@5.6.2)
     devDependencies:
-      '@afe1/vite-config':
-        specifier: workspace:^
-        version: link:../../internal/vite-config
       '@vitejs/plugin-vue':
         specifier: ^5.1.4
         version: 5.1.4(vite@5.4.9(@types/node@22.5.5))(vue@3.5.12(typescript@5.6.2))
-      typescript:
-        specifier: ^5.5.3
-        version: 5.6.2
       vite:
         specifier: ^5.4.8
         version: 5.4.9(@types/node@22.5.5)
@@ -67,9 +55,20 @@ importers:
         specifier: ^9.10.0
         version: 9.10.0(jiti@2.0.0)
 
-  internal/tsconfig: {}
+  internal/tsconfig:
+    devDependencies:
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.9(@types/node@22.5.5)
 
-  internal/vite-config: {}
+  internal/vite-config:
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: ^5.1.4
+        version: 5.1.4(vite@5.4.9(@types/node@22.5.5))(vue@3.5.12(typescript@5.6.2))
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.9(@types/node@22.5.5)
 
 packages:
 
