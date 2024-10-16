@@ -8,12 +8,11 @@
   ],
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./index.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "default": "./dist/index.mjs",
       "types": "./src/index.ts",
-      "development": "./index.ts"
+      "default": "./dist/index.mjs"
     }
   },
   "scripts": {

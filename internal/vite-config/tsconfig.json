@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@afe1/tsconfig/node.json",
   "include": [
-    "index.ts"
+    "src"
   ],
   "exclude": [
     "node_modules"
