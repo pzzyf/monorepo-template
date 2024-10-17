@@ -23,6 +23,7 @@
   "license": "ISC",
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
+    "dotenv": "^16.4.5",
     "vite": "^5.4.8"
   }
 }
