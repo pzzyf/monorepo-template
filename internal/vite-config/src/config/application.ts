@@ -1,23 +1,49 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig, loadEnv } from 'vite'
 import { loadAndConvertEnv } from '../utils/env'
 import { getCommonConfig } from './common'
 import { mergeConfig } from 'vite'
 import type { UserConfig } from 'vite'
+import { loadApplicationPlugins } from '../plugin'
 
 function defineApplicationConfig(userConfigPromise?: any) {
   return defineConfig(async (config) => {
 
     const options = await userConfigPromise?.(config)
 
-    const { base, port } = await loadAndConvertEnv()
+    const { base, port, ...envConfig } = await loadAndConvertEnv()
 
-    const { vite = {} } = options || {};
+    const { vite = {}, application = {} } = options || {};
 
-    const { command } = config
+    const { command,mode } = config
 
     const isBuild = command === 'build';
 
+    const root = process.cwd()
+    const env = loadEnv(mode, root)
+
+    const plugins = await loadApplicationPlugins({
+      archiver: true,
+      archiverPluginOptions: {},
+      compress: false,
+      compressTypes: ['brotli', 'gzip'],
+      devtools: true,
+      env,
+      extraAppConfig: true,
+      html: true,
+      i18n: true,
+      injectAppLoading: true,
+      injectMetadata: true,
+      isBuild,
+      license: true,
+      mode,
+      nitroMock: !isBuild,
+      nitroMockOptions: {},
+      print: !isBuild,
+      pwa: true,
+      vxeTableLazyImport: true,
+      ...envConfig,
+      ...application,
+    });
 
     const applicationConfig: UserConfig = {
       base,
@@ -35,10 +61,18 @@ function defineApplicationConfig(userConfigPromise?: any) {
         drop: isBuild ? ['debugger'] : [],
         legalComments: 'none',
       },
-      plugins: [vue()],
+      plugins,
       server: {
         host: true,
-        port
+        port,
+        warmup: {
+          // 预热文件
+          clientFiles: [
+            './index.html',
+            './src/bootstrap.ts',
+            './src/{views,layouts,router,store,api}/*',
+          ],
+        },
       }
     }
 

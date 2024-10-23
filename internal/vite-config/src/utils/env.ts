@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import { join } from 'node:path';
 import dotenv from 'dotenv';
+import type { ApplicationPluginOptions } from '../typing';
 
 const getBoolean = (value: string | undefined) => value === 'true';
 
@@ -61,7 +62,13 @@ async function loadEnv<T = Record<string, string>>(
 async function loadAndConvertEnv(
   match = 'VITE_',
   confFiles = getConfFiles(),
-) {
+): Promise<
+{
+  appTitle: string;
+  base: string;
+  port: number;
+} & Partial<ApplicationPluginOptions>
+> {
 
   const envConfig = await loadEnv(match, confFiles);
 
