@@ -3,7 +3,7 @@ import { loadAndConvertEnv } from '../utils/env'
 import { getCommonConfig } from './common'
 import { mergeConfig } from 'vite'
 import type { UserConfig } from 'vite'
-import { loadApplicationPlugins } from '../plugin'
+import { loadApplicationPlugins } from '../plugins'
 
 function defineApplicationConfig(userConfigPromise?: any) {
   return defineConfig(async (config) => {
@@ -14,7 +14,7 @@ function defineApplicationConfig(userConfigPromise?: any) {
 
     const { vite = {}, application = {} } = options || {};
 
-    const { command,mode } = config
+    const { command, mode } = config
 
     const isBuild = command === 'build';
 
