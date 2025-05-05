@@ -1,22 +1,20 @@
-import { defineConfig, loadEnv } from 'vite'
+import type { UserConfig } from 'vite'
+import { defineConfig, loadEnv, mergeConfig } from 'vite'
+import { loadApplicationPlugins } from '../plugins'
 import { loadAndConvertEnv } from '../utils/env'
 import { getCommonConfig } from './common'
-import { mergeConfig } from 'vite'
-import type { UserConfig } from 'vite'
-import { loadApplicationPlugins } from '../plugins'
 
 function defineApplicationConfig(userConfigPromise?: any) {
   return defineConfig(async (config) => {
-
     const options = await userConfigPromise?.(config)
 
     const { base, port, ...envConfig } = await loadAndConvertEnv()
 
-    const { vite = {}, application = {} } = options || {};
+    const { vite = {}, application = {} } = options || {}
 
     const { command, mode } = config
 
-    const isBuild = command === 'build';
+    const isBuild = command === 'build'
 
     const root = process.cwd()
     const env = loadEnv(mode, root)
@@ -43,7 +41,7 @@ function defineApplicationConfig(userConfigPromise?: any) {
       vxeTableLazyImport: true,
       ...envConfig,
       ...application,
-    });
+    })
 
     const applicationConfig: UserConfig = {
       base,
@@ -73,14 +71,12 @@ function defineApplicationConfig(userConfigPromise?: any) {
             './src/{views,layouts,router,store,api}/*',
           ],
         },
-      }
+      },
     }
 
     const mergedCommonConfig = mergeConfig(await getCommonConfig(), applicationConfig)
 
-    return mergeConfig(mergedCommonConfig, vite);
-
-
+    return mergeConfig(mergedCommonConfig, vite)
   })
 }
 

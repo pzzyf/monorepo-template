@@ -5,11 +5,10 @@ import viteVueJsx from '@vitejs/plugin-vue-jsx'
 import viteVueDevTools from 'vite-plugin-vue-devtools'
 // import { viteMetadataPlugin } from './inject-metadata'
 
-
 /**
  * 获取条件成立的 vite 插件
- * @param conditionPlugins 
- * @returns 
+ * @param conditionPlugins
+ * @returns
  */
 
 async function loadConditionPlugins(conditionPlugins: ConditionPlugin[]) {
@@ -24,9 +23,7 @@ async function loadConditionPlugins(conditionPlugins: ConditionPlugin[]) {
   return plugins.flat()
 }
 
-
 async function loadCommonPlugins(options: CommonPluginOptions): Promise<ConditionPlugin[]> {
-
   const { isBuild, devtools } = options
   return [
     {
@@ -52,8 +49,6 @@ async function loadCommonPlugins(options: CommonPluginOptions): Promise<Conditio
 }
 
 async function loadApplicationPlugins(options: ApplicationPluginOptions): Promise<PluginOption[]> {
-
-
   const {
     archiver,
     archiverPluginOptions,
@@ -65,7 +60,7 @@ async function loadApplicationPlugins(options: ApplicationPluginOptions): Promis
   const commonPlugins = await loadCommonPlugins(commonOptions)
 
   return await loadConditionPlugins([
-    ...commonPlugins
+    ...commonPlugins,
   ])
 }
 

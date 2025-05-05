@@ -4,7 +4,7 @@
   "extends": "./web.json",
   "compilerOptions": {
     "types": [
-      "vite/client",
+      "vite/client"
     ]
   }
 }

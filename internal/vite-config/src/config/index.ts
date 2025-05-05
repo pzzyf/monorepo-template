@@ -1,12 +1,11 @@
-import { existsSync } from "node:fs";
-import { defineApplicationConfig } from "./application";
+import { existsSync } from 'node:fs'
 import { join } from 'node:path'
+import { defineApplicationConfig } from './application'
 
 function defineConfig(
   useConfigPromise?: any,
-  type: 'application' | 'library' | 'auto' = 'auto'
+  type: 'application' | 'library' | 'auto' = 'auto',
 ) {
-
   let projectType = type
 
   if (projectType == 'auto') {
@@ -19,7 +18,7 @@ function defineConfig(
       return defineApplicationConfig(useConfigPromise)
     }
     default: {
-      throw new Error(`Unsupported project type: ${projectType}`);
+      throw new Error(`Unsupported project type: ${projectType}`)
     }
   }
 }

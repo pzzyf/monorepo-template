@@ -1,12 +1,12 @@
 {
   "name": "@afe1/tsconfig",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "author": "",
   "license": "ISC",
   "keywords": [],
   "main": "index.js",
-  "type": "module",
   "files": [
     "base.json",
     "library.json",

@@ -10,7 +10,9 @@
   "keywords": [],
   "scripts": {
     "dev": "turbo run dev",
-    "postinstall": "turbo run stub"
+    "postinstall": "turbo run stub",
+    "lint": "eslint .",
+    "format": "eslint . --fix"
   },
   "devDependencies": {
     "@afe1/eslint-config": "workspace:*",

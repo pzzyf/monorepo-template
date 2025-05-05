@@ -1,12 +1,12 @@
-import type { UserConfig } from "vite"
+import type { UserConfig } from 'vite'
 
 async function getCommonConfig(): Promise<UserConfig> {
   return {
     build: {
       chunkSizeWarningLimit: 1000,
       reportCompressedSize: false,
-      sourcemap: false
-    }
+      sourcemap: false,
+    },
   }
 }
 
