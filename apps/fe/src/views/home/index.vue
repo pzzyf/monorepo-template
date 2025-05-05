@@ -1,8 +1,14 @@
 <template>
-  <router-view></router-view>
+  <div>
+    home
+  </div>
 </template>
 
 <script setup>
+
+defineOptions({
+  name: "Home"
+})
 
 </script>
 
