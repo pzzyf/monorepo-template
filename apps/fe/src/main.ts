@@ -1,8 +1,6 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import { router } from './router'
-import './style.css'
+async function initApplication() {
+  const { bootStrap } = await import('./bootstrap')
+  bootStrap()
+}
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
+initApplication()
