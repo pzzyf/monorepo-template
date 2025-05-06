@@ -1,0 +1,26 @@
+{
+  "name": "@afe1-core/shared",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "ISC",
+  "sideEffects": false,
+  "exports": {
+    "./utils": {
+      "types": "./src/utils/index.ts",
+      "development": "./src/utils/index.ts",
+      "default": "./dist/utils/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "stub": "pnpm unbuild --stub"
+  },
+  "dependencies": {
+    "nprogress": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/nprogress": "^0.2.3"
+  }
+}

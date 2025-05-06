@@ -1,12 +1,12 @@
 import type { Router } from 'vue-router'
+import { startProgress, stopProgress } from '@afe1/utils'
 
 function commonGuard(router: Router) {
-  router.beforeEach((to) => {
-    if (to.path === '/home') {
-      return {
-        path: '/login',
-      }
-    }
+  router.beforeEach(() => {
+    startProgress()
+  })
+  router.afterEach(() => {
+    stopProgress()
   })
 }
 
