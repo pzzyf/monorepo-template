@@ -1,0 +1,11 @@
+{
+  "name": "@afe1-core/design",
+  "version": "1.0.0",
+  "license": "ISC",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "development": "./src/index.ts"
+    }
+  }
+}

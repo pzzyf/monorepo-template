@@ -41,6 +41,9 @@ importers:
 
   apps/fe:
     dependencies:
+      '@afe1/styles':
+        specifier: workspace:*
+        version: link:../../packages/styles
       '@afe1/utils':
         specifier: workspace:*
         version: link:../../packages/utils
@@ -125,6 +128,8 @@ importers:
         specifier: ^4.3.0
         version: 4.3.0(@types/node@22.5.5)(rollup@2.79.2)(typescript@5.6.2)(vite@5.4.9(@types/node@22.5.5)(terser@5.36.0))
 
+  packages/@core/base/design: {}
+
   packages/@core/shared:
     dependencies:
       nprogress:
@@ -134,6 +139,12 @@ importers:
       '@types/nprogress':
         specifier: ^0.2.3
         version: 0.2.3
+
+  packages/styles:
+    dependencies:
+      '@afe1-core/design':
+        specifier: workspace:*
+        version: link:../@core/base/design
 
   packages/utils:
     dependencies:

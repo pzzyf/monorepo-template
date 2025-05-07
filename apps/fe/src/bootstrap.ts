@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { router } from './router'
 import './style.css'
-import './nprogress.css'
+import '@afe1/styles'
 
 function bootStrap() {
   const app = createApp(App)
