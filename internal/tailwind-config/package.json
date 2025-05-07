@@ -1,0 +1,21 @@
+{
+  "name": "@afe1/tailwind-config",
+  "version": "1.0.0",
+  "license": "ISC",
+  "exports": {
+    ".": {
+      "default": "./index.mjs"
+    },
+    "./postcss": {
+      "default": "./postcss.config.mjs"
+    }
+  },
+  "peerDependencies": {
+    "tailwindcss": "3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "3"
+  }
+}
