@@ -1,17 +1,24 @@
 import type { Router } from 'vue-router'
 import { startProgress, stopProgress } from '@afe1/utils'
 
-function commonGuard(router: Router) {
-  router.beforeEach(() => {
-    startProgress()
+function setupCommonGuard(router: Router) {
+  const loadedPaths = new Set<string>()
+
+  router.beforeEach((to) => {
+    to.meta.loaded = loadedPaths.has(to.path)
+
+    if (!to.meta.loaded) {
+      startProgress()
+    }
   })
-  router.afterEach(() => {
+  router.afterEach((to) => {
+    loadedPaths.add(to.path)
     stopProgress()
   })
 }
 
 function createRouterGuard(router: Router) {
-  commonGuard(router)
+  setupCommonGuard(router)
 }
 
 export { createRouterGuard }
