@@ -50,6 +50,9 @@ importers:
 
   apps/fe:
     dependencies:
+      '@afe1/preferences':
+        specifier: workspace:*
+        version: link:../../packages/preferences
       '@afe1/styles':
         specifier: workspace:*
         version: link:../../packages/styles
@@ -129,6 +132,12 @@ importers:
 
   packages/@core/base/design: {}
 
+  packages/@core/preferences:
+    dependencies:
+      vue:
+        specifier: ^3.5.10
+        version: 3.5.12(typescript@5.6.2)
+
   packages/@core/shared:
     dependencies:
       nprogress:
@@ -138,6 +147,12 @@ importers:
       '@types/nprogress':
         specifier: ^0.2.3
         version: 0.2.3
+
+  packages/preferences:
+    dependencies:
+      '@afe1-core/preferences':
+        specifier: workspace:*
+        version: link:../@core/preferences
 
   packages/styles:
     dependencies:

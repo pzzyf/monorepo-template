@@ -1,0 +1,13 @@
+{
+  "name": "@afe1/preferences",
+  "version": "1.0.0",
+  "license": "ISC",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@afe1-core/preferences": "workspace:*"
+  }
+}

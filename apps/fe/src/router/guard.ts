@@ -1,4 +1,5 @@
 import type { Router } from 'vue-router'
+import { preferences } from '@afe1/preferences'
 import { startProgress, stopProgress } from '@afe1/utils'
 
 function setupCommonGuard(router: Router) {
@@ -7,13 +8,15 @@ function setupCommonGuard(router: Router) {
   router.beforeEach((to) => {
     to.meta.loaded = loadedPaths.has(to.path)
 
-    if (!to.meta.loaded) {
+    if (!to.meta.loaded && preferences.transition.progress) {
       startProgress()
     }
   })
   router.afterEach((to) => {
     loadedPaths.add(to.path)
-    stopProgress()
+    if (preferences.transition.progress) {
+      stopProgress()
+    }
   })
 }
 

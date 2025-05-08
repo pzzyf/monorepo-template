@@ -1,0 +1,14 @@
+{
+  "name": "@afe1-core/preferences",
+  "version": "1.0.0",
+  "license": "ISC",
+  "keywords": [],
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "vue": "^3.5.10"
+  }
+}
