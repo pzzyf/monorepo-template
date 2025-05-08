@@ -13,10 +13,5 @@
     "@afe1/utils": "workspace:*",
     "vue": "^3.5.10",
     "vue-router": "4"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.1.4",
-    "vite": "^5.4.8",
-    "vue-tsc": "^2.1.6"
   }
 }

@@ -26,6 +26,9 @@ importers:
       '@types/node':
         specifier: ^22.5.5
         version: 22.5.5
+      '@vitejs/plugin-vue':
+        specifier: ^5.1.4
+        version: 5.1.4(vite@5.4.9(@types/node@22.5.5)(terser@5.36.0))(vue@3.5.12(typescript@5.6.2))
       tailwindcss:
         specifier: '3'
         version: 3.4.17
@@ -38,6 +41,12 @@ importers:
       unbuild:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.6.2)(vue-tsc@2.1.6(typescript@5.6.2))
+      vite:
+        specifier: ^5.4.8
+        version: 5.4.9(@types/node@22.5.5)(terser@5.36.0)
+      vue-tsc:
+        specifier: ^2.1.6
+        version: 2.1.6(typescript@5.6.2)
 
   apps/fe:
     dependencies:
@@ -53,16 +62,6 @@ importers:
       vue-router:
         specifier: '4'
         version: 4.5.1(vue@3.5.12(typescript@5.6.2))
-    devDependencies:
-      '@vitejs/plugin-vue':
-        specifier: ^5.1.4
-        version: 5.1.4(vite@5.4.9(@types/node@22.5.5)(terser@5.36.0))(vue@3.5.12(typescript@5.6.2))
-      vite:
-        specifier: ^5.4.8
-        version: 5.4.9(@types/node@22.5.5)(terser@5.36.0)
-      vue-tsc:
-        specifier: ^2.1.6
-        version: 2.1.6(typescript@5.6.2)
 
   internal/eslint-config:
     devDependencies:
