@@ -1,6 +1,9 @@
 <template>
-  <div>
-    123
+  <div class="flex">
+    <div>123</div>
+    <div>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 

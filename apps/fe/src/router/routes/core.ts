@@ -26,11 +26,6 @@ const coreRoutes: RouteRecordRaw[] = [
       },
     ],
   },
-  // {
-  //   component: import('#/views/dashboard/analytics/index.vue'),
-  //   name: 'Analytics',
-  //   path: '/analytics',
-  // },
 ]
 
 export { coreRoutes }
