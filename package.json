@@ -15,6 +15,7 @@
     "format": "eslint . --fix"
   },
   "devDependencies": {
+    "@afe1/constants": "workspace:*",
     "@afe1/eslint-config": "workspace:*",
     "@afe1/node-utils": "workspace:*",
     "@afe1/tailwind-config": "workspace:*",

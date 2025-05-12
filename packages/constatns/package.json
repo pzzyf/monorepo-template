@@ -1,0 +1,13 @@
+{
+  "name": "@afe1/constants",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "ISC",
+  "keywords": [],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  }
+}

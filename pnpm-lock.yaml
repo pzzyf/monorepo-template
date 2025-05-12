@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@afe1/constants':
+        specifier: workspace:*
+        version: link:packages/constatns
       '@afe1/eslint-config':
         specifier: workspace:*
         version: link:internal/eslint-config
@@ -50,6 +53,9 @@ importers:
 
   apps/fe:
     dependencies:
+      '@afe1/constants':
+        specifier: workspace:*
+        version: link:../../packages/constatns
       '@afe1/preferences':
         specifier: workspace:*
         version: link:../../packages/preferences
@@ -147,6 +153,8 @@ importers:
       '@types/nprogress':
         specifier: ^0.2.3
         version: 0.2.3
+
+  packages/constatns: {}
 
   packages/preferences:
     dependencies:

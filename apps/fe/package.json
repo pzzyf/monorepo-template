@@ -8,7 +8,11 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
+  "imports": {
+    "#/*": "./src/*"
+  },
   "dependencies": {
+    "@afe1/constants": "workspace:*",
     "@afe1/preferences": "workspace:*",
     "@afe1/styles": "workspace:*",
     "@afe1/utils": "workspace:*",
