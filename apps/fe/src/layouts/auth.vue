@@ -1,14 +1,18 @@
-<template>
-  <div class="flex">
-    <div>123</div>
-    <div>
-      <router-view></router-view>
-    </div>
-  </div>
-</template>
+<script setup lang="ts">
 
-<script setup>
+import { AuthPageLogin } from "@afe1/layouts"
+import { preferences } from "@afe1/preferences";
+import { computed } from "vue";
+
+const appName = computed(() => preferences.app.name)
 
 </script>
 
-<style lang="scss" scoped></style>
+
+<template>
+  <div>
+    <AuthPageLogin :app-name="appName" />
+  </div>
+</template>
+
+<style scoped></style>

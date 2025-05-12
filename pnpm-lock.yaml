@@ -56,6 +56,9 @@ importers:
       '@afe1/constants':
         specifier: workspace:*
         version: link:../../packages/constatns
+      '@afe1/layouts':
+        specifier: workspace:*
+        version: link:../../packages/effects/layouts
       '@afe1/preferences':
         specifier: workspace:*
         version: link:../../packages/preferences
@@ -155,6 +158,8 @@ importers:
         version: 0.2.3
 
   packages/constatns: {}
+
+  packages/effects/layouts: {}
 
   packages/preferences:
     dependencies:

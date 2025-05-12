@@ -4,3 +4,4 @@ packages:
   - 'packages/*'
   - 'packages/@core/*'
   - 'packages/@core/base/*'
+  - 'packages/effects/*'
