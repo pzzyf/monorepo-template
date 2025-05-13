@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { router } from './router'
-import './style.css'
 import '@afe1/styles'
 
 function bootStrap() {
