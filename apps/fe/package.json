@@ -17,6 +17,7 @@
     "@afe1/preferences": "workspace:*",
     "@afe1/styles": "workspace:*",
     "@afe1/utils": "workspace:*",
+    "ant-design-vue": "^4.2.6",
     "vue": "^3.5.10",
     "vue-router": "4"
   }
