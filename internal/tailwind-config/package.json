@@ -13,7 +13,8 @@
   "peerDependencies": {
     "tailwindcss": "3"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@manypkg/get-packages": "^3.0.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "tailwindcss": "3"

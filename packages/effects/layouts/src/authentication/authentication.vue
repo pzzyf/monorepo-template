@@ -10,11 +10,11 @@ const props = withDefaults(defineProps<Props>(), {
 
 </script>
 
-
-
 <template>
-  <div>
-    {{ props.appName }}
+  <div class="flex justify-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
   </div>
 </template>
 
