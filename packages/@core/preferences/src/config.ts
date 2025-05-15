@@ -6,6 +6,9 @@ const defaultPreferences = {
   transition: {
     progress: true,
   },
+  copyright: {
+    enable: true,
+  },
 }
 
 export { defaultPreferences }

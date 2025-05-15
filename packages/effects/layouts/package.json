@@ -8,6 +8,7 @@
     }
   },
   "dependencies": {
+    "@afe1/preferences": "workspace:*",
     "vue": "^3.5.10"
   }
 }

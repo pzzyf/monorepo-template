@@ -16,6 +16,10 @@ const shadcnUiColors = {
     ...createColorsPalette('primary'),
     DEFAULT: 'hsl(var(--primary))',
   },
+  background: {
+    deep: 'hsl(var(--background-deep))',
+    DEFAULT: 'hsl(var(--background))',
+  },
 }
 
 export default {

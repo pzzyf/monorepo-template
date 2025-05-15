@@ -167,6 +167,9 @@ importers:
 
   packages/effects/layouts:
     dependencies:
+      '@afe1/preferences':
+        specifier: workspace:*
+        version: link:../../preferences
       vue:
         specifier: ^3.5.10
         version: 3.5.12(typescript@5.6.2)
