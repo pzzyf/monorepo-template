@@ -6,7 +6,6 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "main": "index.js",
   "files": [
     "base.json",
     "library.json",

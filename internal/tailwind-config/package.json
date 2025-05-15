@@ -4,11 +4,20 @@
   "license": "ISC",
   "exports": {
     ".": {
-      "default": "./index.mjs"
+      "types": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./postcss": {
-      "default": "./postcss.config.mjs"
-    }
+      "types": "./src/postcss.config.ts",
+      "import": "./dist/postcss.config.mjs",
+      "require": "./dist/postcss.config.cjs",
+      "default": "./dist/postcss.config.mjs"
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "stub": "pnpm unbuild --stub"
   },
   "peerDependencies": {
     "tailwindcss": "3"

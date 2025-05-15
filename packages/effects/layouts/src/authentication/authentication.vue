@@ -11,10 +11,8 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div class="min-h-full overflow-x-hidden select-none">
-    <div class=" w-full flex items-center justify-center relative">
-      <div class="login-background absolute left-0 top-0 size-full" />
-    </div>
+  <div class=" size-full flex items-center justify-center">
+    <div>1</div>
   </div>
 </template>
 
