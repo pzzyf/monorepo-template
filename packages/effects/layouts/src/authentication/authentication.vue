@@ -11,11 +11,19 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div class="flex justify-center">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
+  <div class="min-h-full overflow-x-hidden select-none">
+    <div class=" w-full flex items-center justify-center relative">
+      <div class="login-background absolute left-0 top-0 size-full" />
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.login-background {
+  background: linear-gradient(154deg,
+      #07070915 30%,
+      hsl(var(--primary) / 30%) 48%,
+      #07070915 64%);
+  filter: blur(100px);
+}
+</style>

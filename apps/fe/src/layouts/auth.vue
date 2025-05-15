@@ -10,9 +10,7 @@ const appName = computed(() => preferences.app.name)
 
 
 <template>
-  <div>
-    <AuthPageLogin :app-name="appName" />
-  </div>
+  <AuthPageLogin :app-name="appName" />
 </template>
 
 <style scoped></style>
