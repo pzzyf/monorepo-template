@@ -4,14 +4,13 @@ import { preferences } from '@afe1/preferences';
 
 interface Props {
   appName: string,
-  copyright: boolean
+  copyright?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   appName: '',
   copyright: true
 })
-
 </script>
 
 <template>
@@ -22,7 +21,6 @@ const props = withDefaults(defineProps<Props>(), {
         class="md:bg-background shadow-primary/5 shadow-float w-full rounded-3xl pb-20 md:w-2/3 lg:w-1/2 xl:w-[36%]">
         <template v-if="props.copyright" #copyright>
           <slot name="copyright">
-            <div>123</div>
           </slot>
         </template>
       </AuthenticationFormView>
