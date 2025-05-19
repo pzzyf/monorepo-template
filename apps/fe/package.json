@@ -12,6 +12,7 @@
     "#/*": "./src/*"
   },
   "dependencies": {
+    "@afe1/common-ui": "workspace:*",
     "@afe1/constants": "workspace:*",
     "@afe1/layouts": "workspace:*",
     "@afe1/preferences": "workspace:*",

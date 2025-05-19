@@ -53,6 +53,9 @@ importers:
 
   apps/fe:
     dependencies:
+      '@afe1/common-ui':
+        specifier: workspace:*
+        version: link:../../packages/effects/common-ui
       '@afe1/constants':
         specifier: workspace:*
         version: link:../../packages/constatns
@@ -164,6 +167,8 @@ importers:
         version: 0.2.3
 
   packages/constatns: {}
+
+  packages/effects/common-ui: {}
 
   packages/effects/layouts:
     dependencies:

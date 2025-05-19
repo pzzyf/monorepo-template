@@ -1,10 +1,11 @@
 <template>
-  <div>
-    login
-  </div>
+  <AuthenticationLogin />
 </template>
 
 <script setup>
+
+import { AuthenticationLogin } from '@afe1/common-ui';
+
 
 </script>
 
