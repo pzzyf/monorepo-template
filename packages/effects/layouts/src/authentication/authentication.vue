@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AuthenticationFormView from "./form.vue";
-import { preferences } from '@afe1/preferences';
+// import { preferences } from '@afe1/preferences';
 
 interface Props {
   appName: string,
