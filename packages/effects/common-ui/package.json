@@ -8,6 +8,7 @@
     }
   },
   "dependencies": {
-    "@afe1-core/shadcn-ui": "workspace:*"
+    "@afe1-core/shadcn-ui": "workspace:*",
+    "vue": "^3.5.10"
   }
 }
