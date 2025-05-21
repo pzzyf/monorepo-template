@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import Title from './auth-title.vue';
+import { Afe1Test } from "@afe1-core/shadcn-ui"
 
 defineOptions({
   name: 'AuthenticationLogin',
@@ -24,6 +25,15 @@ defineOptions({
         </template>
       </Title>
     </slot>
+
+    <div class="mb-6 flex justify-between">
+      <div class="flex justify-center items-center">
+        <Afe1Test />
+        <div>记住账号？</div>
+      </div>
+      <div>忘记密码</div>
+    </div>
+
   </div>
 </template>
 
