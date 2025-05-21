@@ -1,1 +1,1 @@
-export { default as Afe1Test } from './index.vue'
+export { default as Afe1Checkbox } from './index.vue'

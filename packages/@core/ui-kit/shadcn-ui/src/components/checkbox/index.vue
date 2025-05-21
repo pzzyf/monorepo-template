@@ -1,36 +1,19 @@
 <script setup lang="ts">
-import { PopoverArrow, PopoverClose, PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'reka-ui'
+
+import { useId } from 'vue';
+import { Checkbox } from '../../ui/checkbox';
+
+const id = useId()
+
 </script>
 
 <template>
-  <PopoverRoot>
-    <PopoverTrigger class="PopoverTrigger">
-      More info
-    </PopoverTrigger>
-    <PopoverPortal>
-      <PopoverContent class="PopoverContent">
-        Some more info...
-        <PopoverClose />
-        <PopoverArrow class="PopoverArrow" />
-      </PopoverContent>
-    </PopoverPortal>
-  </PopoverRoot>
+  <div class="flex items-center">
+    <Checkbox :id="id" />
+    <label :for="id" class="ml-2 cursor-pointer text-sm">
+      <slot></slot>
+    </label>
+  </div>
 </template>
 
-<style>
-.PopoverTrigger {
-  background-color: white;
-  border-radius: 4px;
-}
-
-.PopoverContent {
-  border-radius: 4px;
-  padding: 20px;
-  width: 260px;
-  background-color: white;
-}
-
-.PopoverArrow {
-  background-color: white;
-}
-</style>
+<style scoped></style>
